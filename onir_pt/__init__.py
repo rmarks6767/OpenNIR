@@ -401,6 +401,8 @@ class OpenNIRPyterrierReRanker(pyterrier.transformer.EstimatorBase):
                     batch[f].append(rec['docno'])
                 elif f == 'query_id':
                     batch[f].append(rec['qid'])
+                elif f == 'query_idf':
+                    batch[f].append([1])
                 elif f == 'query_rawtext':
                     batch[f].append(rec['query'])
                 elif f == 'doc_rawtext':
