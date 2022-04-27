@@ -101,6 +101,9 @@ class PtPairTrainerBase:
                 elif f == 'query_id':
                     batch[f].append(pair.qid)
                     batch[f].append(pair.qid)
+                elif f == 'query_idf':
+                    batch[f].append([1])
+                    batch[f].append([1])
                 elif f == 'query_rawtext':
                     batch[f].append(rec.query)
                     batch[f].append(rec.query)
